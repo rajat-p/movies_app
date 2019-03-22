@@ -39,8 +39,8 @@ extension MoviesListInteractor: MovieListInteraction {
         apiManager.getMovies { (result) in
             switch result {
             case .success(let response):
-                if let movies = response.body {
-                    self.movies = MoviesListModel.Response.fromJSON(json: response.body ?? [:])
+                if let moviesResponse = response.body {
+                    self.movies = MoviesListModel.Response.fromJSON(json: moviesResponse)
                     if self.movies.count > 0 {
                         self.presenter?.presentMovies(movies: self.movies)
                     } else {
