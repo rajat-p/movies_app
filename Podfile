@@ -7,7 +7,7 @@ target 'MoviesApp' do
 
   # Pods for MoviesApp
 
-  pod 'Kingfisher'
+  pod 'Kingfisher', '4.10.0'
   pod 'youtube-ios-player-helper'
   target 'MoviesAppTests' do
     inherit! :search_paths
